@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed; /* Ganti dengan URL gambar latar */
+    background-size: cover;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Transparan hitam */
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 5px 0 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Transparan putih */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.video {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ukuran maksimal video */
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.landscape iframe {
+    width: 100%;
+    height: 450px;
+}
+
+.portrait iframe {
+    width: 100%;
+    height: 650px;
+}
+
+.fullscreen-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.fullscreen-button:hover {
+    background-color: #555;
+    margin-bottom: 20px;
+}
+
+.button1 {
+    display: inline-block;
+    background-color: #FF0000; /* Warna merah YouTube */
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px 0; /* Menambahkan margin atas dan bawah */
+}
+
+.button1:hover {
+    background-color: #CC0000; /* Warna merah gelap saat hover */
+    margin-bottom: 20px;
+}
+
+
+.description {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .landscape iframe {
+        height: 300px; /* Perkecil ukuran video pada layar kecil */
+    }
+
+    .portrait iframe {
+        height: 500px; /* Perkecil ukuran video pada layar kecil */
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibnu Vlog</title>
+    <link rel="stylesheet" href="style.css"> <!-- Hubungkan dengan file CSS -->
+</head>
+<body>
+    <header>
+        <p>Selamat datang di vlog pribadi saya!</p>
+    </header>
+
+    <main class="container">
+        <section class="video">
+            <h2>Video Terbaru</h2>
+            <div id="video-container" class="video-wrapper landscape">
+                <iframe
+                    id="video-frame"
+                    src="https://youtu.be/yyHQAeJhiuM"
+                    title="Vlog Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <button id="toggle-fullscreen" class="fullscreen-button">Ganti Mode</button> <!-- Tombol Ganti Mode -->
+<a href="https://youtu.be/yyHQAeJhiuM" target="_blank" class="button1">Tonton Video di YouTube</a>
+            
+        </section>
+
+        <section class="description">
+            <h2>Deskripsi</h2>
+            <p>
+                Ini adalah vlog terbaru saya. Jangan lupa untuk like, komentar, dan subscribe agar tidak ketinggalan konten menarik berikutnya!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Vlog Gw - Semua Hak Dilindungi
+    </footer>
+
+    <script>
+        // Menangani tombol untuk mengubah posisi video (portrait/landscape)
+        const toggleButton = document.getElementById('toggle-fullscreen');
+        const videoContainer = document.getElementById('video-container');
+
+        toggleButton.addEventListener('click', () => {
+            // Toggle antara landscape dan portrait
+            if (videoContainer.classList.contains('landscape')) {
+                videoContainer.classList.remove('landscape');
+                videoContainer.classList.add('portrait');
+                toggleButton.textContent = "Ganti ke Lanskap";
+            } else {
+                videoContainer.classList.remove('portrait');
+                videoContainer.classList.add('landscape');
+                toggleButton.textContent = "Ganti ke Potret";
+            }
+        });
+    </script>
+</body>
+</html>
